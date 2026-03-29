@@ -20,7 +20,7 @@ export default function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio('https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112123.mp3');
+    audioRef.current = new Audio('/music/Hindia - everything u are.mp3');
     audioRef.current.loop = true;
     audioRef.current.volume = 0.4;
     return () => {
