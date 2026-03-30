@@ -11,14 +11,14 @@ export default function MusicPage({ onBack, isPlaying, toggleMusic }: { key?: st
     >
       <button 
         onClick={onBack}
-        className="absolute top-8 left-8 p-3 glass text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 p-3 px-6 glass text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full whitespace-nowrap shadow-lg"
       >
-        <ArrowLeft size={20} />
-        <span className="font-medium pr-2">Back</span>
+        <Heart size={20} fill="currentColor" className="text-pink-400" />
+        <span className="font-handwriting text-xl">Kembali ke Hatimu 💜</span>
       </button>
 
       <div className="max-w-md w-full glass rounded-3xl p-8 shadow-2xl shadow-purple-200/50 text-center relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-br from-purple-200/50 to-pink-200/50 opacity-50" />
+        <div className="absolute top-0 left-0 w-full h-32 bg-linear-to-br from-purple-200/50 to-pink-200/50 opacity-50" />
         
         <motion.div 
           className="relative z-10 w-40 h-40 mx-auto bg-white/50 rounded-full flex items-center justify-center mb-8 shadow-inner"
@@ -33,7 +33,7 @@ export default function MusicPage({ onBack, isPlaying, toggleMusic }: { key?: st
             className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-md"
           >
             <img 
-              src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=400" 
+              src="/forContent/foto (20).jpeg" 
               alt="Record" 
               className="w-full h-full object-cover"
             />
@@ -43,7 +43,7 @@ export default function MusicPage({ onBack, isPlaying, toggleMusic }: { key?: st
 
         <div className="relative z-10">
           <h2 className="text-2xl font-serif text-purple-900 mb-2">Our Song</h2>
-          <p className="text-purple-500 text-sm mb-8 font-medium">Playing: Romantic Piano</p>
+          <p className="text-purple-500 text-sm mb-8 font-medium">Playing: Everything U Are</p>
 
           <button 
             onClick={toggleMusic}
@@ -55,7 +55,7 @@ export default function MusicPage({ onBack, isPlaying, toggleMusic }: { key?: st
           <div className="bg-white/50 p-4 rounded-2xl border border-purple-100">
             <Heart className="w-6 h-6 text-pink-400 mx-auto mb-2 animate-pulse" fill="currentColor" />
             <p className="text-sm text-purple-800/80 italic">
-              "I chose this because every time I hear it, it reminds me of the peace and happiness you bring into my life."
+             “Setiap kali aku dengar ‘Everything You Are’, aku langsung kepikiran kamu… semua yang kamu bawa ke hidupku, bikin hati ini tenang dan bahagia 💜”
             </p>
           </div>
         </div>

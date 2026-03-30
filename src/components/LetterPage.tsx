@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowLeft, Mail } from 'lucide-react';
+import { ArrowLeft, Mail, Heart } from 'lucide-react';
 import { useState } from 'react';
 
 export default function LetterPage({ onBack }: { key?: string, onBack: () => void }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.div 
+   <motion.div 
       className="min-h-screen flex flex-col items-center justify-center p-6 sm:p-12 relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -14,10 +14,10 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
     >
       <button 
         onClick={onBack}
-        className="absolute top-8 left-8 p-3 glass text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 p-3 px-6 glass text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full whitespace-nowrap shadow-lg"
       >
-        <ArrowLeft size={20} />
-        <span className="font-medium pr-2">Back</span>
+        <Heart size={20} fill="currentColor" className="text-pink-400" />
+        <span className="font-handwriting text-xl">Kembali ke Hatimu 💜</span>
       </button>
 
       <div className="relative w-full max-w-2xl flex items-center justify-center min-h-[600px]">
@@ -55,7 +55,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 1 }}
               >
-                <h2 className="text-4xl font-handwriting text-purple-900 mb-8">My Dearest,</h2>
+                <h2 className="text-4xl font-handwriting text-purple-900 mb-8">Untuk Raihana tersayang,</h2>
                 
                 <div className="space-y-6 text-purple-900 leading-relaxed text-2xl font-handwriting">
                   <motion.p
@@ -63,7 +63,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5, duration: 1 }}
                   >
-                    Happy 20th Birthday! 🎉 I can't believe you're entering a whole new decade. It feels like just yesterday we were making our first memories together.
+                    Selamat ulang tahun yang ke-18, Raihana! 🎉 Rasanya baru kemarin kita mulai mengenal satu sama lain, dan sekarang kamu sudah semakin dewasa dan luar biasa. Aku senang banget bisa melihat setiap langkahmu dan semua momen indah kita bersama.
                   </motion.p>
                   
                   <motion.p
@@ -71,7 +71,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                     animate={{ opacity: 1 }}
                     transition={{ delay: 3, duration: 1 }}
                   >
-                    I wanted to make something special for you today. Something that you could keep and look at whenever you want to be reminded of how much you mean to me.
+                    Aku ingin membuat sesuatu yang spesial untukmu hari ini. Sesuatu yang bisa kamu simpan dan lihat kapan pun kamu ingin diingatkan bahwa kamu begitu berarti bagiku.
                   </motion.p>
                   
                   <motion.p
@@ -79,7 +79,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                     animate={{ opacity: 1 }}
                     transition={{ delay: 4.5, duration: 1 }}
                   >
-                    You are the most beautiful, kind-hearted, and amazing person I know. Watching you grow and achieve your dreams is my favorite privilege. I promise to be by your side, cheering you on, for all the birthdays to come.
+                    Kamu adalah orang yang paling indah, baik hati, dan luar biasa yang pernah aku kenal. Mendengar dan melihat kamu tumbuh serta mengejar impianmu adalah salah satu kebahagiaan terbesar dalam hidupku. Aku berjanji akan selalu ada di sampingmu, mendukungmu, di setiap ulang tahunmu ke depan.
                   </motion.p>
                   
                   <motion.p
@@ -87,7 +87,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                     animate={{ opacity: 1 }}
                     transition={{ delay: 6, duration: 1 }}
                   >
-                    Thank you for being you. Thank you for being mine.
+                    Terima kasih karena menjadi dirimu. Terima kasih karena menjadi milikku. Dan setiap kali aku dengar lagu “Everything You Are” oleh Hindia, aku selalu teringat betapa tenang dan bahagianya hidupku karena kamu 💜
                   </motion.p>
                 </div>
 
@@ -97,8 +97,8 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                   animate={{ opacity: 1 }}
                   transition={{ delay: 7.5, duration: 1 }}
                 >
-                  <p className="text-purple-900 font-handwriting text-3xl">Forever yours,</p>
-                  <p className="text-purple-700 font-handwriting text-2xl mt-2">Me 💜</p>
+                  <p className="text-purple-900 font-handwriting text-3xl">Selamanya milikmu,</p>
+                  <p className="text-purple-700 font-handwriting text-2xl mt-2">Aku 💜</p>
                 </motion.div>
               </motion.div>
             </motion.div>

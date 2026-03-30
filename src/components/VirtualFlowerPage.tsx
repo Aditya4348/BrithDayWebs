@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Heart } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const quotes = [
@@ -50,10 +50,10 @@ export default function VirtualFlowerPage({ onBack }: { key?: string, onBack: ()
     >
       <button 
         onClick={onBack}
-        className="absolute top-8 left-8 p-3 glass text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 p-3 px-6 glass text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full whitespace-nowrap shadow-lg"
       >
-        <ArrowLeft size={20} />
-        <span className="font-medium pr-2">Back</span>
+        <Heart size={20} fill="currentColor" className="text-pink-400" />
+        <span className="font-handwriting text-xl">Kembali ke Hatimu 💜</span>
       </button>
 
       {/* Floating Quotes */}

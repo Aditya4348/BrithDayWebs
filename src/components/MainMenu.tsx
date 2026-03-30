@@ -3,10 +3,30 @@ import { Camera, Flower2, Music, Heart } from 'lucide-react';
 import type { Step } from '../App';
 
 const cards = [
-  { id: 'photo-video', title: 'Memories', icon: Camera, desc: 'A little trip down memory lane 📸' },
-  { id: 'flower', title: 'For You', icon: Flower2, desc: 'Something that never fades 🌸' },
-  { id: 'music', title: 'Our Song', icon: Music, desc: 'Listen to this 🎵' },
-  { id: 'letter', title: 'My Heart', icon: Heart, desc: 'A few words for you 💌' },
+  { 
+    id: 'photo-video', 
+    title: 'Kenangan', 
+    icon: Camera, 
+    desc: 'Sekilas perjalanan manis kita 📸' 
+  },
+  { 
+    id: 'flower', 
+    title: 'Untukmu', 
+    icon: Flower2, 
+    desc: 'Sesuatu yang tak pernah pudar 🌸' 
+  },
+  { 
+    id: 'music', 
+    title: 'Lagu Kita', 
+    icon: Music, 
+    desc: 'Dengarkan lagu ini dan ingat aku 🎵' 
+  },
+  { 
+    id: 'letter', 
+    title: 'Hati Ku', 
+    icon: Heart, 
+    desc: 'Beberapa kata dari hatiku 💌' 
+  },
 ];
 
 export default function MainMenu({ onNavigate, completedSteps, onFinish }: { key?: string, onNavigate: (step: Step) => void, completedSteps: Set<string>, onFinish: () => void }) {
@@ -21,12 +41,12 @@ export default function MainMenu({ onNavigate, completedSteps, onFinish }: { key
     >
       <div className="max-w-4xl w-full relative z-10">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-12 pt-10"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-3xl md:text-5xl font-serif text-purple-900 mb-4 drop-shadow-sm">Your Birthday Gifts</h2>
+          <h2 className="text-2xl md:text-5xl font-serif text-purple-900 mb-4 drop-shadow-sm">Happy Birthday Raii kuu 💜</h2>
           <p className="text-purple-700/80 font-medium">Choose an envelope to open...</p>
         </motion.div>
 
@@ -51,7 +71,7 @@ export default function MainMenu({ onNavigate, completedSteps, onFinish }: { key
               >
                 {/* Envelope Flap Decoration */}
                 {!isCompleted && (
-                  <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/40 to-transparent -skew-y-6 transform origin-top-left transition-transform duration-500 group-hover:-translate-y-full" />
+                  <div className="absolute top-0 left-0 w-full h-1/2 bg-linear-to-b from-white/40 to-transparent -skew-y-6 transform origin-top-left transition-transform duration-500 group-hover:-translate-y-full" />
                 )}
                 
                 <div className="relative z-10 flex items-center justify-between mb-4">
@@ -80,9 +100,9 @@ export default function MainMenu({ onNavigate, completedSteps, onFinish }: { key
             >
               <button 
                 onClick={onFinish}
-                className="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-400 hover:from-purple-600 hover:to-pink-500 text-white rounded-full font-medium transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transform hover:-translate-y-1 text-lg"
+                className="px-10 py-4 bg-linear-to- from-purple-500 to-pink-400 hover:from-purple-600 hover:to-pink-500 text-shadow-purple-500 rounded-full font-medium transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transform hover:-translate-y-1 text-lg"
               >
-                Continue to my final wish 💜
+                Yuk, lanjut ke harapanku yang paling spesial 💜
               </button>
             </motion.div>
           )}

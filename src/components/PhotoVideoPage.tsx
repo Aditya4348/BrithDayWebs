@@ -4,32 +4,32 @@ import { useState } from 'react';
 
 const scatteredPhotos = [
   // Baris atas
-  { id: 1, url: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=400', top: '2%', left: '2%', rotate: -15, delay: 0.1 },
-  { id: 2, url: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=400', top: '1%', left: '18%', rotate: 5, delay: 0.15 },
-  { id: 3, url: 'https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&q=80&w=400', top: '3%', right: '18%', rotate: -8, delay: 0.2 },
-  { id: 4, url: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&q=80&w=400', top: '2%', right: '2%', rotate: 12, delay: 0.25 },
+  { id: 1, url: '/forContent/foto (1).jpeg', top: '2%', left: '2%', rotate: -15, delay: 0.1 },
+  { id: 2, url: '/forContent/foto (2).jpeg', top: '1%', left: '18%', rotate: 5, delay: 0.15 },
+  { id: 3, url: '/forContent/foto (3).jpeg', top: '3%', right: '18%', rotate: -8, delay: 0.2 },
+  { id: 4, url: '/forContent/foto (4).jpeg', top: '2%', right: '2%', rotate: 12, delay: 0.25 },
   
   // Baris kiri
-  { id: 5, url: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=400', top: '15%', left: '-3%', rotate: -22, delay: 0.3 },
-  { id: 6, url: 'https://images.unsplash.com/photo-1518599904199-0ca897819ddb?auto=format&fit=crop&q=80&w=400', top: '28%', left: '-1%', rotate: 18, delay: 0.35 },
-  { id: 7, url: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=400', top: '42%', left: '-4%', rotate: -25, delay: 0.4 },
-  { id: 8, url: 'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&q=80&w=400', top: '55%', left: '-2%', rotate: 10, delay: 0.45 },
+  { id: 5, url: '/forContent/foto (5).jpeg', top: '15%', left: '-3%', rotate: -22, delay: 0.3 },
+  { id: 6, url: '/forContent/foto (6).jpeg', top: '28%', left: '-1%', rotate: 18, delay: 0.35 },
+  { id: 7, url: '/forContent/foto (7).jpeg', top: '42%', left: '-4%', rotate: -25, delay: 0.4 },
+  { id: 8, url: '/forContent/foto (8).jpeg', top: '55%', left: '-2%', rotate: 10, delay: 0.45 },
   
   // Baris kanan
-  { id: 9, url: 'https://images.unsplash.com/photo-1536590158209-e9d615d525e4?auto=format&fit=crop&q=80&w=400', top: '15%', right: '-3%', rotate: 20, delay: 0.5 },
-  { id: 10, url: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=400', top: '28%', right: '-1%', rotate: -14, delay: 0.55 },
-  { id: 11, url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400', top: '42%', right: '-4%', rotate: 16, delay: 0.6 },
-  { id: 12, url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=400', top: '55%', right: '-2%', rotate: -18, delay: 0.65 },
+  { id: 9, url: '/forContent/foto (9).jpeg', top: '15%', right: '-3%', rotate: 20, delay: 0.5 },
+  { id: 10, url: '/forContent/foto (10).jpeg', top: '28%', right: '-1%', rotate: -14, delay: 0.55 },
+  { id: 11, url: '/forContent/foto (11).jpeg', top: '42%', right: '-4%', rotate: 16, delay: 0.6 },
+  { id: 12, url: '/forContent/foto (12).jpeg', top: '55%', right: '-2%', rotate: -18, delay: 0.65 },
   
   // Baris bawah
-  { id: 13, url: 'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&q=80&w=400', bottom: '2%', left: '3%', rotate: -10, delay: 0.7 },
-  { id: 14, url: 'https://images.unsplash.com/photo-1536590158209-e9d615d525e4?auto=format&fit=crop&q=80&w=400', bottom: '1%', left: '20%', rotate: 7, delay: 0.75 },
-  { id: 15, url: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=400', bottom: '3%', right: '20%', rotate: -12, delay: 0.8 },
-  { id: 16, url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400', bottom: '2%', right: '3%', rotate: 9, delay: 0.85 },
+  { id: 13, url: '/forContent/foto (13).jpeg', bottom: '2%', left: '3%', rotate: -10, delay: 0.7 },
+  { id: 14, url: '/forContent/foto (14).jpeg', bottom: '1%', left: '20%', rotate: 7, delay: 0.75 },
+  { id: 15, url: '/forContent/foto (15).jpeg', bottom: '3%', right: '20%', rotate: -12, delay: 0.8 },
+  { id: 16, url: '/forContent/foto (16).jpeg', bottom: '2%', right: '3%', rotate: 9, delay: 0.85 },
   
   // Tambahan tumpuk di sudut
-  { id: 17, url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=400', top: '48%', left: '8%', rotate: 25, delay: 0.9 },
-  { id: 18, url: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=400', top: '50%', right: '8%', rotate: -28, delay: 0.95 },
+  { id: 17, url: '/forContent/foto (17).jpeg', top: '48%', left: '8%', rotate: 25, delay: 0.9 },
+  { id: 18, url: '/forContent/foto (18).jpeg', top: '50%', right: '8%', rotate: -28, delay: 0.95 },
 ];
 
 const romanticStickers = [
@@ -64,10 +64,10 @@ export default function PhotoVideoPage({ onBack }: { key?: string, onBack: () =>
     >
       <button 
         onClick={onBack}
-        className="absolute top-8 left-8 p-3 glass bg-white/40 backdrop-blur-md text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full shadow-lg"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 p-3 px-6 glass bg-white/40 backdrop-blur-md text-purple-700 hover:text-purple-900 transition-colors flex items-center gap-2 z-50 rounded-full shadow-lg whitespace-nowrap"
       >
-        <ArrowLeft size={20} />
-        <span className="font-medium pr-2">Back</span>
+        <Heart size={20} fill="currentColor" className="text-pink-400" />
+        <span className="font-handwriting text-xl">Kembali ke Hatimu 💜</span>
       </button>
 
       {/* Scattered Photos - Lebih banyak dan berantakan */}
@@ -164,7 +164,7 @@ export default function PhotoVideoPage({ onBack }: { key?: string, onBack: () =>
         )}
         
         <video 
-          src="/video/VideoTEst.mp4" 
+          src="/forContent/Collpse.mp4" 
           autoPlay 
           loop 
           muted 
@@ -173,7 +173,7 @@ export default function PhotoVideoPage({ onBack }: { key?: string, onBack: () =>
           className={`w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
         />
         
-        <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+        <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 bg-linear-to-t from-black/70 via-black/30 to-transparent">
           <p className="text-white font-serif text-lg md:text-2xl drop-shadow-md flex items-center gap-2">
             <Sparkles size={18} className="text-yellow-300" />
             Every moment with you feels like a dream.
