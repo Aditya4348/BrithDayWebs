@@ -10,8 +10,9 @@ import MusicPage from './components/MusicPage';
 import LetterPage from './components/LetterPage';
 import FinalScreen from './components/FinalScreen';
 import CustomCursor from './components/CustomCursor';
+import LoginPage from './components/LoginPage';
 
-export type Step = 'opening' | 'maybe-later' | 'menu' | 'photo-video' | 'flower' | 'music' | 'letter' | 'final';
+export type Step = 'opening' | 'maybe-later' | 'login' | 'menu' | 'photo-video' | 'flower' | 'music' | 'letter' | 'final';
 
 export default function App() {
   const [step, setStep] = useState<Step>('opening');
@@ -56,7 +57,7 @@ export default function App() {
       
       {/* Global Music Toggle */}
       <AnimatePresence>
-        {step !== 'opening' && step !== 'maybe-later' && (
+        {step !== 'opening' && step !== 'maybe-later' && step !== 'login' && (
           <motion.button
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -70,8 +71,9 @@ export default function App() {
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
-        {step === 'opening' && <OpeningScreen key="opening" onNext={handleStartExperience} onLater={() => setStep('maybe-later')} />}
-        {step === 'maybe-later' && <MaybeLaterScreen key="maybe-later" onNext={handleStartExperience} />}
+        {step === 'opening' && <OpeningScreen key="opening" onNext={() => setStep('login')} onLater={() => setStep('maybe-later')} />}
+        {step === 'maybe-later' && <MaybeLaterScreen key="maybe-later" onNext={() => setStep('login')} />}
+        {step === 'login' && <LoginPage key="login" onSuccess={handleStartExperience} />}
         {step === 'menu' && <MainMenu key="menu" onNavigate={setStep} completedSteps={completedSteps} onFinish={() => setStep('final')} />}
         {step === 'photo-video' && <PhotoVideoPage key="photo-video" onBack={() => handleCompleteStep('photo-video')} />}
         {step === 'flower' && <VirtualFlowerPage key="flower" onBack={() => handleCompleteStep('flower')} />}

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Camera, Flower2, Music, Heart } from 'lucide-react';
 import type { Step } from '../App';
@@ -31,6 +32,11 @@ const cards = [
 
 export default function MainMenu({ onNavigate, completedSteps, onFinish }: { key?: string, onNavigate: (step: Step) => void, completedSteps: Set<string>, onFinish: () => void }) {
   const allCompleted = cards.every(c => completedSteps.has(c.id));
+
+  // useEffect scroll to top when this component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <motion.div 
