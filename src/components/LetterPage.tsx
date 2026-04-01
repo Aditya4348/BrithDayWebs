@@ -55,7 +55,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 1 }}
               >
-                <h2 className="text-4xl font-handwriting text-purple-900 mb-8">Untuk Raihana tersayang,</h2>
+                <h2 className="text-4xl font-handwriting text-purple-900 mb-8">Untuk Raii tersayang,</h2>
                 
                 <div className="space-y-6 text-purple-900 leading-relaxed text-2xl font-handwriting">
                   <motion.p
@@ -63,7 +63,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5, duration: 1 }}
                   >
-                    Selamat ulang tahun yang ke-18, Raihana! 🎉 Rasanya baru kemarin kita mulai mengenal satu sama lain, dan sekarang kamu sudah semakin dewasa dan luar biasa. Aku senang banget bisa melihat setiap langkahmu dan semua momen indah kita bersama.
+                    Selamat ulang tahun yang ke-18, Raii! 🎉 Rasanya baru kemarin kita mulai mengenal satu sama lain, dan sekarang kamu sudah semakin dewasa dan luar biasa. Aku senang banget bisa melihat setiap langkahmu dan semua momen indah kita bersama.
                   </motion.p>
                   
                   <motion.p

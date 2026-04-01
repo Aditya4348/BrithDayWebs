@@ -59,7 +59,7 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
       sendSystem("✨ hai… seseorang yang spesial ✨", 500);
       setTimeout(() => sendSystem("aku sudah lama menunggu momen ini… 💜", 1500), 500);
       setTimeout(() => sendSystem("ada sesuatu yang ingin aku sampaikan ke kamu… 🌸", 2800), 1500);
-      setTimeout(() => sendSystem("tapi sebelumnya… aku pengen denger lagi, kamu biasa manggil aku apa? 💜", 4200), 2800);
+      setTimeout(() => sendSystem("tapi sebelumnya... aku pengen ngetes kamu, kamu biasa dipanggil aku apa? 💜", 4200), 2800);
       setTimeout(() => {
         setPhase('askName');
         inputRef.current?.focus();
@@ -82,7 +82,7 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
     // STEP 1: VALIDASI NAMA
     // ======================
     if (phase === 'askName') {
-      if (input.toLowerCase() === 'vyhan') {
+      if (input.toLowerCase() === 'raii' || input.toLowerCase() === 'Raii' || input.toLowerCase() === 'rai' || input.toLowerCase() === 'Rai') {
         setTimeout(() => {
           sendSystem("💕 iya… ternyata kamu masih ingat 💕", 400);
         }, 400);
@@ -110,7 +110,7 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
     // STEP 2: VALIDASI TANGGAL
     // ======================
     else if (phase === 'askDate') {
-      if (input === '230326') {
+      if (input === '230326' || input === '23 Maret 2026' || input === '23/03/2026' || input === '2026-03-23' || input === '23-03-2026' || input === 'March 23, 2026' || input === 'Mar 23, 2026' || input === '23 Maret 2026' || input === '23 maret 26' || input === '23 Mar 2026' || input === '23 Mar 26' || input === '23 maret 2026') {
         setTimeout(() => {
           sendSystem("🌹 ya… 23 Maret 2026, hari yang tak pernah aku lupakan 🌹", 400);
         }, 400);
@@ -142,7 +142,7 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
   };
 
   return (
-    <div className="relative min-h-screen bg-linear-to-br from-rose-900 via-purple-900 to-indigo-900 flex flex-col justify-between p-4 overflow-hidden">
+    <div className="relative min-h-screen bg-purple-50 flex flex-col justify-between p-4 overflow-hidden">
       
       {/* Floating Hearts Animation */}
       {floatingHearts.map((heart) => (
@@ -184,9 +184,9 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
           animate={{ y: 0 }}
           className="absolute top-4 left-0 right-0 text-center z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full shadow-sm border border-purple-100">
             <Heart className="text-pink-300" size={16} fill="#f9a8d4" />
-            <span className="text-white/90 text-sm">Untukmu yang tersayang</span>
+            <span className="text-purple-800 text-sm font-medium">Untukmu yang tersayang</span>
             <Sparkles className="text-yellow-300" size={14} />
           </div>
         </motion.div>
@@ -207,8 +207,8 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
                 className={`max-w-[80%] px-5 py-3 rounded-2xl text-sm md:text-base shadow-lg ${
                   msg.sender === 'system'
                     ? msg.isSpecial
-                      ? 'bg-linear-to-r from-pink-500/30 to-purple-500/30 backdrop-blur-sm text-white border border-pink-300/30'
-                      : 'bg-white/20 backdrop-blur-sm text-white'
+                      ? 'bg-linear-to-r from-pink-100 to-purple-100 text-purple-900 border border-purple-200'
+                      : 'bg-white text-purple-900'
                     : 'bg-linear-to-r from-pink-400 to-purple-500 text-white'
                 }`}
               >
@@ -230,22 +230,22 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
             animate={{ opacity: 1 }}
             className="flex justify-start"
           >
-            <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-2xl">
+            <div className="bg-purple-100 px-4 py-2 rounded-2xl">
               <div className="flex gap-1">
                 <motion.div
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 0.5, repeat: Infinity }}
-                  className="w-2 h-2 bg-white rounded-full"
+                  className="w-2 h-2 bg-purple-400 rounded-full"
                 />
                 <motion.div
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 0.5, repeat: Infinity, delay: 0.2 }}
-                  className="w-2 h-2 bg-white rounded-full"
+                  className="w-2 h-2 bg-purple-400 rounded-full"
                 />
                 <motion.div
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 0.5, repeat: Infinity, delay: 0.4 }}
-                  className="w-2 h-2 bg-white rounded-full"
+                  className="w-2 h-2 bg-purple-400 rounded-full"
                 />
               </div>
             </div>
@@ -262,13 +262,13 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
           animate={{ y: 0 }}
           className="relative"
         >
-          <div className="flex items-center gap-2 mt-4 bg-white/10 backdrop-blur-sm rounded-full p-2">
+          <div className="flex items-center gap-2 mt-4 bg-white shadow-lg border border-purple-100 rounded-full p-2">
             {phase === 'askName' ? (
-              <User className="ml-3 text-white/60" size={20} />
+              <User className="ml-3 text-purple-400" size={20} />
             ) : phase === 'askDate' ? (
-              <Calendar className="ml-3 text-white/60" size={20} />
+              <Calendar className="ml-3 text-purple-400" size={20} />
             ) : (
-              <Sparkles className="ml-3 text-white/60" size={20} />
+              <Sparkles className="ml-3 text-purple-400" size={20} />
             )}
             
             <input
@@ -276,12 +276,8 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-              placeholder={
-                phase === 'askName' 
-                  ? "tulis namamu di sini... 💜" 
-                  : "masukkan tanggal spesial kita... 🗓️"
-              }
-              className="flex-1 px-3 py-3 bg-transparent outline-none text-white placeholder:text-white/50"
+              placeholder= "Ketik Pesan... 💜"
+              className="flex-1 px-3 py-3 bg-transparent outline-none text-purple-900 placeholder:text-purple-300"
             />
             
             <motion.button
@@ -300,7 +296,7 @@ export default function ChatLogin({ onSuccess }: { onSuccess: () => void }) {
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center text-white/50 text-xs mt-2"
+              className="text-center text-purple-400 text-xs mt-2"
             >
               * tanggal dimana semua cerita indah ini dimulai
             </motion.p>
