@@ -63,7 +63,7 @@ export default function LetterPage({ onBack }: { key?: string, onBack: () => voi
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5, duration: 1 }}
                   >
-                    Selamat ulang tahun yang ke-18, Raii! 🎉 Rasanya baru kemarin kita mulai mengenal satu sama lain, dan sekarang kamu sudah semakin dewasa dan luar biasa. Aku senang banget bisa melihat setiap langkahmu dan semua momen indah kita bersama.
+                    Selamat ulang tahun yang ke-17, Raii! 🎉 Rasanya baru kemarin kita mulai mengenal satu sama lain, dan sekarang kamu sudah semakin dewasa dan luar biasa. Aku senang banget bisa melihat setiap langkahmu dan semua momen indah kita bersama.
                   </motion.p>
                   
                   <motion.p
